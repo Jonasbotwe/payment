@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="usdt.css">
+</head>
+<body>
+    <div>
+        <nav>
+    <header class="header1">
+        <h2 class="h3">BITCOIN ADDRESS</h2>
+    </header>
+        </nav>
+</div>
+<div class="cont1">
+    <div class="popup" id="popup">
+        <p>Pay the exact amount to the bitcoin adrress below</p>
+        <p><strong>bc1qas23vnqv7a4huvqdxrmg2yj59qgwjq5ng0ld0d</strong></p>
+
+        <p><strong>Select Network- Bitcoin</strong></p>
+        <p>Click done to process order.</p><br>
+        Email address to receive card <br>
+        <input type="email" placeholder="eg. joe@gmail.com"><br><br>
+        Upload screenshot here
+        <input type="file" id="real-file" hidden="hidden">
+      <button type="button" id="me" >Choose File</button>
+      <span id="custom-text">No file chosen</span><br><br><br>
+       <button type="submit" id="me1">Done</button>
+      </div>
+    </div>
+
+
+
+    <footer>Copyright  © Nonvbvcards 2023</footer>
+
+
+    <script type="text/javascript">
+        const realFileBtn=document.getElementById("real-file");
+        const customBtn=document.getElementById("me");
+        const customText=document.getElementById("custom-text");
+
+        customBtn.addEventListener("click", function(){
+            realFileBtn.click();
+        })
+
+        realFileBtn.addEventListener("change",function(){
+            if(realFileBtn.value){
+                customText.innerHTML=""
+            }else{
+                customText.innerHTML="No file chosen"
+            }
+        })
+
+    </script>
+</body>
+</html>
